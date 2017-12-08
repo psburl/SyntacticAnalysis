@@ -1,0 +1,10 @@
+/home/psburl/Documents/SyntacticAnalysis/bin/Debug/netcoreapp2.0/SyntacticAnalysis.deps.json
+/home/psburl/Documents/SyntacticAnalysis/bin/Debug/netcoreapp2.0/SyntacticAnalysis.runtimeconfig.json
+/home/psburl/Documents/SyntacticAnalysis/bin/Debug/netcoreapp2.0/SyntacticAnalysis.runtimeconfig.dev.json
+/home/psburl/Documents/SyntacticAnalysis/bin/Debug/netcoreapp2.0/SyntacticAnalysis.dll
+/home/psburl/Documents/SyntacticAnalysis/bin/Debug/netcoreapp2.0/SyntacticAnalysis.pdb
+/home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.csproj.CoreCompileInputs.cache
+/home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.AssemblyInfoInputs.cache
+/home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.AssemblyInfo.cs
+/home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.dll
+/home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.pdb
