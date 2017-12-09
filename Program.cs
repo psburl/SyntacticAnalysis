@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace SyntacticAnalysis
@@ -19,9 +20,11 @@ namespace SyntacticAnalysis
         {
             List<Metadata> queue = GetLexicalAnalysisResponse();
 
-            foreach(var meta in queue)
-                Console.Write(meta.type + " ");
-            Console.WriteLine("");
+            string goloutputFile = File.ReadAllText("gold/table.xml");
+
+            XElement xml = XElement.Parse(goloutputFile);
+
+            Analyser analyser = new Analyser(xml, queue);
         }
     }
 }

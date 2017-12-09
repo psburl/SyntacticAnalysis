@@ -8,3 +8,14 @@
 /home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.AssemblyInfo.cs
 /home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.dll
 /home/psburl/Documents/SyntacticAnalysis/obj/Debug/netcoreapp2.0/SyntacticAnalysis.pdb
+C:\Users\Wesley\Documents\SyntacticAnalysis\bin\Debug\netcoreapp2.0\SyntacticAnalysis.deps.json
+C:\Users\Wesley\Documents\SyntacticAnalysis\bin\Debug\netcoreapp2.0\SyntacticAnalysis.runtimeconfig.json
+C:\Users\Wesley\Documents\SyntacticAnalysis\bin\Debug\netcoreapp2.0\SyntacticAnalysis.runtimeconfig.dev.json
+C:\Users\Wesley\Documents\SyntacticAnalysis\bin\Debug\netcoreapp2.0\SyntacticAnalysis.dll
+C:\Users\Wesley\Documents\SyntacticAnalysis\bin\Debug\netcoreapp2.0\SyntacticAnalysis.pdb
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.csprojResolveAssemblyReference.cache
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.AssemblyInfoInputs.cache
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.AssemblyInfo.cs
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.dll
+C:\Users\Wesley\Documents\SyntacticAnalysis\obj\Debug\netcoreapp2.0\SyntacticAnalysis.pdb
