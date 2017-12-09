@@ -7,13 +7,16 @@ namespace SyntacticAnalysis
 {
     public class LALARTable
     {
-        LALRState states = new LALRState();
+        public LALRState states = new LALRState();
+        public int initialState = -1;
 
         public static LALARTable FromXml(XElement xml)
         {
             LALARTable table = new LALARTable();
 
-            foreach(var element in xml.Descendants("LALRState"))
+            table.initialState = xml.Attribute("InitialState").Value.AsInteger();
+
+            foreach (var element in xml.Descendants("LALRState"))
             {
                 int index = element.Attribute("Index").Value.AsInteger();
 

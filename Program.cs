@@ -25,6 +25,7 @@ namespace SyntacticAnalysis
             XElement xml = XElement.Parse(goloutputFile);
 
             Analyser analyser = new Analyser(xml, queue);
+            analyser.Analyse();
         }
     }
 }
