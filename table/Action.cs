@@ -9,7 +9,8 @@ namespace SyntacticAnalysis
         none,
         shiftTo = 1,
         reduceProduction,
-        goTo
+        goTo,
+        accept
     };
 
     public class ActionBuilder
@@ -21,6 +22,7 @@ namespace SyntacticAnalysis
                 case 1: return Action.shiftTo;
                 case 2: return Action.reduceProduction;
                 case 3: return Action.goTo;
+                case 4: return Action.accept;
                 default: return Action.none;
             }
         }

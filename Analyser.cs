@@ -50,6 +50,25 @@ namespace SyntacticAnalysis
             LALRStateElement state = table.states[currentState];
             LALRAction action = state.actions.FirstOrDefault(r => r.symbolIndex == symbolIndex);
 
+            if(action == null)
+            {
+                int eofIndex = symbols.FirstOrDefault(r => r.Value.name == "EOF").Key;
+
+                action = state.actions.FirstOrDefault(r => r.symbolIndex == eofIndex);
+
+                if (action != null)
+                {
+                    Metadata metadata = new Metadata("EOF", "");
+                    Do(metadata, ref currentState);
+                    Do(element, ref currentState);
+                    return;
+                }
+                else
+                {
+                    var f = "";
+                }
+            }
+
             Action toDo = ActionBuilder.FromId(action.action);
 
             if (toDo == Action.shiftTo)
@@ -65,14 +84,19 @@ namespace SyntacticAnalysis
             {
                 ProductionElement production = productions[action.value];
 
-                StackState stackState = null;
                 for (int i = 0; i < production.productionSymbols.Count(); i++)
                 {
-                    stackState = stack.Pop();
+                    currentState = stack.Pop().state;
                 }
 
+                Metadata metadata = new Metadata(symbols[production.nonTerminalIndex].name, "");
                 stack.Push(new StackState(production.nonTerminalIndex, currentState));
+                Do(metadata, ref currentState);
                 Do(element, ref currentState);
+            }
+            else if(toDo == Action.accept)
+            {
+                currentState = action.value;
             }
         }
     }

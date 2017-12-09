@@ -10,7 +10,7 @@
         | <op> 'elseif' <opei>
         | <op>
 
-<ope> ::= <op>              
+<ope> ::= <op>            
          
 <var> ::= 'int'
        | 'dbl'
@@ -20,6 +20,7 @@
 <value> ::= 'const'
          | 'literal'
          | <var>
+         | 'id'
          
 <comp> ::= 'lt'
         | 'gt'
