@@ -1,0 +1,30 @@
+﻿! Welcome to GOLD Parser Builder 5.2
+"Start Symbol" = <op>
+               
+<op> ::= <var> 'id'':' <value>';'
+         | 'if' <value> <comp> <value> 'then' <opei>
+         | 'print'':'<value>';'
+         | 'id'':' <value>';'
+
+<opei> ::= <op> 'else' <ope>
+        | <op> 'elseif' <opei>
+        | <op>
+
+<ope> ::= <op>            
+         
+<var> ::= 'int'
+       | 'dbl'
+       | 'chr'
+       | 'bool'
+       
+<value> ::= 'const'
+         | 'literal'
+         | <var>
+         | 'id'
+         
+<comp> ::= 'lt'
+        | 'gt'
+        | '='
+        | '!='
+        
+         
