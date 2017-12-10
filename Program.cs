@@ -12,16 +12,24 @@ namespace SyntacticAnalysis
             string file = File.ReadAllText("LexicalAnalysis/lexical.xml");
             XElement xml = XElement.Parse(file); 
             List<Metadata> queue = Metadata.FromXml(xml);
+
+            if(queue.Count == 0)
+                throw new Exception("lexical analysis error");
+
             return queue;
         }
 
         static void Main(string[] args)
         {
-            List<Metadata> queue = GetLexicalAnalysisResponse();
-
-            foreach(var meta in queue)
-                Console.Write(meta.type + " ");
-            Console.WriteLine("");
+            try
+            {
+                List<Metadata> queue = GetLexicalAnalysisResponse();
+            
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

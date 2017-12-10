@@ -20,7 +20,7 @@ namespace SyntacticAnalysis
              }
              return list;
         }
-
+    
         public string type = "";
         public string lexval = "";
     }
