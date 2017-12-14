@@ -32,6 +32,15 @@ namespace SyntacticAnalysis
 
                 Analyser analyser = new Analyser(xml, queue);
                 analyser.Analyse();
+
+                queue = analyser.GetTable();
+
+                foreach(var element in queue.Where(r => r.type != "\n"))
+                {
+                    foreach(var member  in element.GetType().GetFields())
+                        Console.WriteLine(member.Name + ": " + member.GetValue(element));
+                    Console.Write("\n\n");
+                }
             }
             catch(Exception e)
             {

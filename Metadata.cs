@@ -23,5 +23,8 @@ namespace SyntacticAnalysis
     
         public string type = "";
         public string lexval = "";
+        public int symbolIndex = -1;
+        public string lextype = "";
+        public string value = "";
     }
 }

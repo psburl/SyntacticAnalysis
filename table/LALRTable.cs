@@ -5,14 +5,14 @@ using System.Xml.Linq;
 
 namespace SyntacticAnalysis
 {
-    public class LALARTable
+    public class LALRTable
     {
         public LALRState states = new LALRState();
         public int initialState = -1;
 
-        public static LALARTable FromXml(XElement xml)
+        public static LALRTable FromXml(XElement xml)
         {
-            LALARTable table = new LALARTable();
+            LALRTable table = new LALRTable();
 
             table.initialState = xml.Attribute("InitialState").Value.AsInteger();
 

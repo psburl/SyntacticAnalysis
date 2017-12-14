@@ -1,7 +1,4 @@
-﻿! Welcome to GOLD Parser Builder 5.2
-"Start Symbol" = <op>
-               
-<op> ::= <var> 'id'':' <value>';'
+﻿<op> ::= <var> 'id'':' <value>';'  {id.lextype = var.lextype; id.value = value.value}
          | 'if' <value> <comp> <value> 'then' <opei>
          | 'print'':'<value>';'
          | 'id'':' <value>';'
@@ -12,19 +9,17 @@
 
 <ope> ::= <op>            
          
-<var> ::= 'int'
-       | 'dbl'
-       | 'chr'
-       | 'bool'
+<var> ::= 'int' {var.lextype = int.type}
+       | 'dbl'  {var.lextype = dbl.type}
+       | 'chr'  {var.lextype = chr.type}
+       | 'bool' {var.lextype = bool.type}
        
-<value> ::= 'const'
-         | 'literal'
-         | <var>
-         | 'id'
+<value> ::= 'const' {value.value = const.lexval}
+         | 'literal' {value.value = literal.lexval}
+         | <var> {value.value = var.value}
+         | 'id' {value.value = id.lexval}
          
 <comp> ::= 'lt'
         | 'gt'
         | '='
         | '!='
-        
-         
