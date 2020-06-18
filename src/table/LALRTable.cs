@@ -13,13 +13,11 @@ namespace SyntacticAnalysis
         public static LALRTable FromXml(XElement xml)
         {
             LALRTable table = new LALRTable();
-
             table.initialState = xml.Attribute("InitialState").Value.AsInteger();
 
             foreach (var element in xml.Descendants("LALRState"))
             {
                 int index = element.Attribute("Index").Value.AsInteger();
-
                 LALRStateElement stateElement = new LALRStateElement();
 
                 foreach(var actionElemnt in element.Descendants("LALRAction"))
@@ -30,11 +28,8 @@ namespace SyntacticAnalysis
                     action.value = actionElemnt.Attribute("Value").Value.AsInteger();
                     stateElement.actions.Add(action);
                 }
-
-
                 table.states[index] = stateElement;
             }
-
             return table;
         }
     }

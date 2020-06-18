@@ -27,11 +27,11 @@ namespace SyntacticAnalysis
                 };
 
                 foreach(var productionSymbol in element.Descendants("ProductionSymbol"))
+                {
                     productionElement.productionSymbols.Add(productionSymbol.Attribute("SymbolIndex").Value.AsInteger());
-                
+                }
                 production[index] = productionElement;
             }
-
             return production;
         }
     }

@@ -14,20 +14,20 @@ namespace SyntacticAnalysis
         public static long AsLong(this string value, long defaultVal = 0)
         {
             long integer = 0;
-
             if (Int64.TryParse(value, out integer))
+            {
                 return integer;
-
+            }
             return defaultVal;
         }
 
         public static int AsInteger(this string value, int defaultVal = 0)
         {
             int integer = 0;
-
             if (Int32.TryParse(value, out integer))
+            {
                 return integer;
-
+            }
             return defaultVal;
         }
 

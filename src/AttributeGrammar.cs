@@ -40,12 +40,12 @@ namespace SyntacticAnalysis
                 attribute.hash = string.Join(" ", attribute.indexes);
 
                 var match = Regex.Match(element, "{[^}]+}");
-                if (match.Success)
+                if (match.Success) 
+                {
                     attribute.actions = match.Value.Replace("{", "").Replace("}", "").Split(';').ToList();
-                
+                }
                 list.Add(attribute);
             }
-
             return list;
         }
 

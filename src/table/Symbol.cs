@@ -22,15 +22,13 @@ namespace SyntacticAnalysis
         {
             Symbol symbol = new Symbol();
 
-            foreach(var element in xml.Descendants("Symbol"))
+            foreach (var element in xml.Descendants("Symbol"))
             {
                 int index = element.Attribute("Index").Value.AsInteger();
                 string name = element.Attribute("Name").Value;
                 string type = element.Attribute("Type").Value;
-
                 symbol[index] = new SymbolElement(name, type);
             }
-
             return symbol;
         }
     }

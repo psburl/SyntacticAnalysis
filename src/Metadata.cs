@@ -13,14 +13,14 @@ namespace SyntacticAnalysis
 
         public static List<Metadata> FromXml(XElement xml)
         {
-             List<Metadata> list = new  List<Metadata>();
-             foreach(XElement node in xml.Descendants("metadata"))
-             {
-                 list.Add(new Metadata(node.Element("type").Value, node.Element("lexval").Value));
-             }
-             return list;
+            List<Metadata> list = new List<Metadata>();
+            foreach (XElement node in xml.Descendants("metadata"))
+            {
+                list.Add(new Metadata(node.Element("type").Value, node.Element("lexval").Value));
+            }
+            return list;
         }
-    
+
         public string type = "";
         public string lexval = "";
         public int symbolIndex = -1;

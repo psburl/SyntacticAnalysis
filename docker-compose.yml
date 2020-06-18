@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  syntatic-analysis:
+    image: microsoft/dotnet:2.0-sdk
+    working_dir: /app
+    entrypoint: |
+      sh -c '
+        dotnet restore
+        dotnet build
+        dotnet run
+      '
+    volumes:
+    - ./src/:/app
